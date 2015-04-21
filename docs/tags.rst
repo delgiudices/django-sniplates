@@ -74,9 +74,10 @@ Your Django View
 
 .. code-block:: django
 
-   {% nested_widget widgetname .... %}
+   from django import forms
        ...
-   {% endnested %}
+
+   class SomeForm(forms.Form):
 
 Values from ``BoundField``
 --------------------------
