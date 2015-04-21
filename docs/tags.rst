@@ -72,12 +72,11 @@ Example:
 
 Your Django View
 
-.. code-block:: django 
-   from django import forms
+.. code-block:: django
 
-   class SomeForm(forms.Form):
-
-       field_name = forms.CharField(max_length=50)
+   {% nested_widget widgetname .... %}
+       ...
+   {% endnested %}
 
 Values from ``BoundField``
 --------------------------
