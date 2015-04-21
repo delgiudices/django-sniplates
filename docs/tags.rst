@@ -75,9 +75,19 @@ Your Django View
 .. code-block:: django
 
    from django import forms
-       ...
+   from django.shortcuts import render
 
    class SomeForm(forms.Form):
+       field_name = forms.CharField(max_length=25)
+
+    def some_view(request):
+      context = {
+        'form' : SomeForm()
+      }
+
+      return render(request, 'template.html', context)
+
+
 
 Values from ``BoundField``
 --------------------------
