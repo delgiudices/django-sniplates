@@ -17,7 +17,7 @@ This is an example of a bootstrap text input.
 
 Here we have a simple form with a field_name which is a CharField.
 
-.. code-block:: django
+.. code-block:: python 
 
    from django import forms
    from django.shortcuts import render
