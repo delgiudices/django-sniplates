@@ -26,6 +26,7 @@ Contents:
    tags
    changelog
    formulation
+   tutorials
 
 Overview
 --------
@@ -89,4 +90,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

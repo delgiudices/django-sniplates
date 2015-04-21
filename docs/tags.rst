@@ -68,54 +68,7 @@ block matching the following patterns:
 These will be looked up within the alias block set "form", unless the alias
 keyword is passed to override it.
 
-Example: Rendering bootstrap input field
 
-Your Django View
-
-.. code-block:: django
-
-   from django import forms
-   from django.shortcuts import render
-
-   class SomeForm(forms.Form):
-       field_name = forms.CharField(max_length=25)
-
-   def some_view(request):
-       context = {
-           'form' : SomeForm()
-       }
-
-       return render(request, 'template.html', context)
-
-templates/widgets/bootstrap.html
-
-.. code-block:: django
-
-   {% load sniplates %}
-   {% block input %}
-   {% with input_type=input_type|default:"text" %}
-   <input type="{{ input_type }}"
-       name="{{ html_name }}"
-       id="{{ id }}"
-       value="{{ value|default:"" }}"
-       class="form-control {{ css_classes }} {{ errors|yesno:"error," }}"
-       {{ widget.attrs|flat_attrs }}
-       {{ required|yesno:"required," }}
-       {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
-    >
-    {% endwith %}
-    {% endblock %}
-
-    {% block TextInput %}{% reuse "input" %}{% endblock %}
-
-templates/template.html
-
-.. code-block:: django
-
-   {% load sniplates %}
-   {% load_widgets form="widgets/bootstrap.html" %}
-
-   {% form_field form.field_name %}
 
 
 
