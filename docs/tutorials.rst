@@ -17,7 +17,7 @@ This is an example of a bootstrap text input.
 
 Here we have a simple form with a field_name which is a CharField.
 
-.. code-block:: python 
+.. code-block:: python
 
    from django import forms
    from django.shortcuts import render
@@ -44,13 +44,7 @@ Django's CharField's default widget is TextInput, so let's create a template for
    {% with input_type=input_type|default:"text" %}
    <input type="{{ input_type }}"
        name="{{ html_name }}"
-       id="{{ id }}"
-       value="{{ value|default:"" }}"
-       class="form-control {{ css_classes }} {{ errors|yesno:"error," }}"
-       {{ widget.attrs|flat_attrs }}
-       {{ required|yesno:"required," }}
-       {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
-    >
+       class="form-control" />
     {% endwith %}
     {% endblock %}
 
