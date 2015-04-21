@@ -68,6 +68,16 @@ block matching the following patterns:
 These will be looked up within the alias block set "form", unless the alias
 keyword is passed to override it.
 
+Example:
+
+Your Django View
+.. code-block:: django
+   from django import forms 
+   
+   class SomeForm(forms.Form):
+       
+       field_name = forms.CharField(max_length=50)
+
 Values from ``BoundField``
 --------------------------
 
