@@ -40,13 +40,11 @@ Django's CharField's default widget is TextInput, so let's create a template for
 .. code-block:: django
 
    {% load sniplates %}
-   {% block input %}
-   <input type="{{ input_type }}"
+   {% block TextInput %}
+   <input type="text"
        name="{{ html_name }}"
        class="form-control" />
     {% endblock %}
-
-    {% block TextInput %}{% reuse "input" %}{% endblock %}
 
 
 And finally to render it
