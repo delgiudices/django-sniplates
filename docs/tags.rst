@@ -87,7 +87,7 @@ Your Django View
 
        return render(request, 'template.html', context)
 
-templates/bootstrap.html
+templates/widgets/bootstrap.html
 
 .. code-block:: django
 
@@ -107,6 +107,15 @@ templates/bootstrap.html
     {% endblock %}
 
     {% block TextInput %}{% reuse "input" %}{% endblock %}
+
+templates/template.html
+
+.. code-block:: django
+
+   {% load sniplates %}
+   {% load_widgets form="widgets/bootstrap.html" %}
+
+   {% form_field form.field_name %}
 
 
 
