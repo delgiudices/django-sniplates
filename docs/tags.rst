@@ -71,11 +71,12 @@ keyword is passed to override it.
 Example:
 
 Your Django View
-.. code-block:: django
-   from django import forms 
-   
+
+.. code-block:: python
+   from django import forms
+
    class SomeForm(forms.Form):
-       
+
        field_name = forms.CharField(max_length=50)
 
 Values from ``BoundField``
