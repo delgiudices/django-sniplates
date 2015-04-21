@@ -72,7 +72,7 @@ Example:
 
 Your Django View
 
-.. code-block:: python
+.. code-block:: django 
    from django import forms
 
    class SomeForm(forms.Form):
